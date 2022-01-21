@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.ceryle.segmentedbutton
+package br.com.soareseneves.segmentedbutton
 
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable

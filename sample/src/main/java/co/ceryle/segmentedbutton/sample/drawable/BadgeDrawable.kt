@@ -1,18 +1,7 @@
 package co.ceryle.segmentedbutton.sample.drawable
 
 import android.graphics.*
-import co.ceryle.segmentedbutton.SegmentedButtonGroup.getPosition
-import co.ceryle.segmentedbutton.SegmentedButtonGroup.setOnClickedButtonListener
-import co.ceryle.segmentedbutton.SegmentedButtonGroup.setPosition
-import co.ceryle.segmentedbutton.SegmentedButtonGroup.setEnabled
-import co.ceryle.segmentedbutton.SegmentedButton.setDrawable
 import android.graphics.drawable.Drawable
-import co.ceryle.segmentedbutton.SegmentedButtonGroup
-import android.os.Bundle
-import co.ceryle.segmentedbutton.sample.R
-import co.ceryle.segmentedbutton.SegmentedButtonGroup.OnClickedButtonListener
-import co.ceryle.segmentedbutton.sample.drawable.BadgeDrawable
-import co.ceryle.segmentedbutton.SegmentedButton
 
 class BadgeDrawable(color: Int, width: Int, height: Int, borderWidth: Int, borderRadius: Int) : Drawable() {
     private val paint: Paint

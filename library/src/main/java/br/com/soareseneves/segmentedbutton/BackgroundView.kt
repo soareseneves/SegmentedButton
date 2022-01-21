@@ -1,4 +1,4 @@
-package co.ceryle.segmentedbutton
+package br.com.soareseneves.segmentedbutton
 
 import android.content.Context
 import android.util.AttributeSet

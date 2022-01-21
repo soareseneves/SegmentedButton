@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.ceryle.segmentedbutton
+package br.com.soareseneves.segmentedbutton
 
 import android.content.Context
 import android.graphics.*
@@ -24,7 +24,7 @@ import android.text.StaticLayout
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
-import co.ceryle.segmentedbutton.SegmentedButton.DrawableGravity
+import co.ceryle.segmentedbutton.R
 
 class SegmentedButton : View {
     //private var context: Context? = null

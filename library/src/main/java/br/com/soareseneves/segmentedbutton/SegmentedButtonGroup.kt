@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.ceryle.segmentedbutton
+package br.com.soareseneves.segmentedbutton
 
 import android.animation.ValueAnimator
 import android.annotation.TargetApi
@@ -34,6 +34,7 @@ import android.view.animation.Interpolator
 import android.view.animation.LinearInterpolator
 import android.widget.FrameLayout
 import android.widget.LinearLayout
+import co.ceryle.segmentedbutton.R
 import java.util.*
 
 class SegmentedButtonGroup : LinearLayout {
@@ -169,7 +170,13 @@ class SegmentedButtonGroup : LinearLayout {
         if (!isHasDivider) return
         dividerContainer!!.showDividers = SHOW_DIVIDER_MIDDLE
         // Divider Views
-        RoundHelper.makeDividerRound(dividerContainer, dividerColor, dividerRadius, dividerSize, dividerBackgroundDrawable)
+        RoundHelper.makeDividerRound(
+            dividerContainer,
+            dividerColor,
+            dividerRadius,
+            dividerSize,
+            dividerBackgroundDrawable
+        )
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             dividerContainer!!.dividerPadding = dividerPadding
         }
@@ -219,9 +226,17 @@ class SegmentedButtonGroup : LinearLayout {
     private val ripples = ArrayList<BackgroundView>()
     private fun setRipple(v: View, isClickable: Boolean) {
         if (isClickable) {
-            if (isHasRippleColor) RippleHelper.setRipple(v, rippleColor, radius) else if (isRipple) RippleHelper.setSelectableItemBackground(context, v) else {
+            if (isHasRippleColor) RippleHelper.setRipple(
+                v,
+                rippleColor,
+                radius
+            ) else if (isRipple) RippleHelper.setSelectableItemBackground(context, v) else {
                 for (button in buttons!!) {
-                    if (button is SegmentedButton && button.hasRipple()) RippleHelper.setRipple(v, button.rippleColor, radius)
+                    if (button is SegmentedButton && button.hasRipple()) RippleHelper.setRipple(
+                        v,
+                        button.rippleColor,
+                        radius
+                    )
                 }
             }
         } else {
@@ -460,7 +475,13 @@ class SegmentedButtonGroup : LinearLayout {
      */
     fun setDividerColor(dividerColor: Int) {
         this.dividerColor = dividerColor
-        RoundHelper.makeDividerRound(dividerContainer, dividerColor, dividerRadius, dividerSize, dividerBackgroundDrawable)
+        RoundHelper.makeDividerRound(
+            dividerContainer,
+            dividerColor,
+            dividerRadius,
+            dividerSize,
+            dividerBackgroundDrawable
+        )
     }
 
     /**
@@ -469,7 +490,13 @@ class SegmentedButtonGroup : LinearLayout {
      */
     fun setDividerSize(dividerSize: Int) {
         this.dividerSize = dividerSize
-        RoundHelper.makeDividerRound(dividerContainer, dividerColor, dividerRadius, dividerSize, dividerBackgroundDrawable)
+        RoundHelper.makeDividerRound(
+            dividerContainer,
+            dividerColor,
+            dividerRadius,
+            dividerSize,
+            dividerBackgroundDrawable
+        )
     }
 
     /**
@@ -478,7 +505,13 @@ class SegmentedButtonGroup : LinearLayout {
      */
     fun setDividerRadius(dividerRadius: Int) {
         this.dividerRadius = dividerRadius
-        RoundHelper.makeDividerRound(dividerContainer, dividerColor, dividerRadius, dividerSize, dividerBackgroundDrawable)
+        RoundHelper.makeDividerRound(
+            dividerContainer,
+            dividerColor,
+            dividerRadius,
+            dividerSize,
+            dividerBackgroundDrawable
+        )
     }
 
     /**
