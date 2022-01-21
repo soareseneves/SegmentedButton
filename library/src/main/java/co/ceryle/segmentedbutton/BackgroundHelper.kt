@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package co.ceryle.segmentedbutton;
+package co.ceryle.segmentedbutton
 
-import android.content.Context;
+import android.graphics.drawable.Drawable
+import android.os.Build
+import android.view.View
 
-class ConversionHelper {
-
-    static float pxToDp(final Context context, final float px) {
-        return px / context.getResources().getDisplayMetrics().density;
-    }
-
-    static int dpToPx(final Context context, final float dp) {
-        return (int) (dp * context.getResources().getDisplayMetrics().density);
-    }
-
-    static float spToPx(final Context context, int size) {
-        return size * context.getResources().getDisplayMetrics().scaledDensity;
+internal object BackgroundHelper {
+    fun setBackground(view: View, drawable: Drawable?) {
+        view.background = drawable
     }
 }
